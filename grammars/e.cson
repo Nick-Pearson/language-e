@@ -1,0 +1,107 @@
+'scopeName': 'text.language-e'
+'fileTypes':[
+  'e'
+]
+'name':'e'
+'patterns': [
+  {
+    'begin':'(\\A|\'>)'
+    'beginCaptures': 'punctuation.definition.comment.language-e'
+    'end': '(<\')'
+    'name': 'comment.line.double-slash.language-e'
+  }
+  {
+    'include': '#language'
+  }
+]
+'repository':
+  'language':
+    'patterns':[
+      {
+        'include':'#inline-comments'
+      }
+      {
+        'include':'#keywords'
+      }
+      {
+        'include':'#strings'
+      }
+      {
+        'include':'#operators'
+      }
+      {
+        'include':'#constants'
+      }
+    ]
+  'inline-comments':
+    'patterns':[
+      {
+        'begin': '(//|--)'
+        'beginCaptures': 'punctuation.definition.comment.language-e'
+        'end': '$\\n?'
+        'name': 'comment.line.double-slash.language-e'
+      }
+    ]
+  'keywords':
+    'patterns':[
+      {
+        'match':'(^| )(extend|unit|var|of|event|cycle|each|in|is|import|for|keep|wait|do|out|inout|start|cover|emit|type|struct|empty|when)(?=( |\\n|{|;))'
+        'name':'keyword.other.language-e'
+      }
+      {
+        'match':'(?<=is )(also|only|instance)'
+        'name':'keyword.other.language-e'
+      }
+      {
+        'match':'(int|uint|simple_port|bits|bit|list|item|cross)'
+        'name':'storage.type.language-e'
+      }
+      {
+        'match':'(fall|rise|change|pack|set_check|simulator_command|out|outf|stop_run)(?=\\()'
+        'name':'support.function.system.language-e'
+      }
+      {
+        'match':'([a-zA-Z_]+(?=\\())'
+        'name':'support.function.language-e'
+      }
+      {
+        'match': '(\@)([a-z]+)'
+        'name': 'constant.language-e'
+      }
+    ]
+  'strings':
+    'patterns':[
+      {
+        'begin': '"'
+        'end': '"'
+        'name': 'string.quoted.double.language-e'
+        'patterns': [
+          {
+            'match': '\\\\.'
+            'name': 'constant.character.escape.language-e'
+          }
+        ]
+      }
+    ]
+  'operators':
+    'patterns': [
+      {
+        'match': '\\+|-|\\*|/|%|<|>|=|(!|=)?==?|!|&&?|\\|\\|?|\\^?~|~\\^?'
+        'name': 'keyword.operator.language-e'
+      }
+    ]
+  'constants':
+    'patterns': [
+      {
+        'match': '(NULL|ERROR_CONTINUE|cycle)'
+        'name': 'constant.language-e'
+      }
+      {
+        'match': '\\b\\d+(?i:e\\d+)?\\b'
+        'name': 'constant.numeric.integer.language-e'
+      }
+      {
+        'match': '\\b\\d+\\.\\d+(?i:e\\d+)?\\b'
+        'name': 'constant.numeric.real.language-e'
+      }
+    ]
