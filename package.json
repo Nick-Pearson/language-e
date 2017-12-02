@@ -1,10 +1,10 @@
 {
   "name": "language-e",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Atom support for the e Hardware Description Language",
-  "engines":{
-    "atom":"*",
-    "node":"*"
+  "engines": {
+    "atom": "*",
+    "node": "*"
   },
   "repository": {
     "type": "git",
