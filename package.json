@@ -1,6 +1,6 @@
 {
   "name": "language-e",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Atom support for the e Hardware Verification Language",
   "engines": {
     "atom": ">=1.0.0",
@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Nick-Pearson/language-e/issues"
   },
-  "keywords":[
+  "keywords": [
     "grammar",
     "e",
     "language",
