@@ -1,9 +1,9 @@
 {
   "name": "language-e",
   "version": "1.0.0",
-  "description": "Atom support for the e Hardware Description Language",
+  "description": "Atom support for the e Hardware Verification Language",
   "engines": {
-    "atom": "*",
+    "atom": ">=1.0.0",
     "node": "*"
   },
   "repository": {
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Nick-Pearson/language-e/issues"
   },
-  "homepage": "https://github.com/Nick-Pearson/language-e"
+  "keywords":[
+    "grammar",
+    "e",
+    "language",
+    "HVL"
+  ]
 }

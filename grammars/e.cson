@@ -3,6 +3,8 @@
   'e'
 ]
 'name':'e'
+'foldingStartMarker': '\{\s*$';
+'foldingStopMarker': '^\s*\}'
 'patterns': [
   {
     'begin':'(\\A|\'>)'
