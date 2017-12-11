@@ -47,11 +47,19 @@
   'keywords':
     'patterns':[
       {
-        'match':'(^| )(extend|unit|var|of|event|each|in|is|import|for|keep|wait|do|out|inout|start|cover|emit|type|struct|empty|when|case|return)(?=( |\\n|{|;))'
+        'match':'(^| )(extend|unit|var|of|event|each|in|is|import|for|keep|wait|do|out|inout|start|cover|emit|type|struct|empty|when|case|return|select|check|else)(?=( |\\n|{|;))'
         'name':'keyword.other.language-e'
       }
       {
         'match':'(?<=is )(also|only|instance)'
+        'name':'keyword.other.language-e'
+      }
+      {
+        'match':'(?<=keep )(soft)'
+        'name':'keyword.other.language-e'
+      }
+      {
+        'match':'(?<=check )(that)'
         'name':'keyword.other.language-e'
       }
       {
@@ -95,7 +103,7 @@
   'constants':
     'patterns': [
       {
-        'match': '(NULL|ERROR_CONTINUE|cycle)'
+        'match': '(NULL|ERROR|ERROR_CONTINUE|cycle)'
         'name': 'constant.language-e'
       }
       {
