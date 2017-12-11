@@ -1,0 +1,75 @@
+'.text.language-e':
+#A
+#B
+#C
+  'case':
+    'prefix':'case'
+    'body': """
+      case {
+       $0
+      }; //case
+    """
+#D
+#E
+  'extend':
+    'prefix':'extend'
+    'body': """
+      extend ${1:name} {
+      \t
+      }; // extend $1
+    """
+
+#F
+  'for-loop':
+    'prefix':'for'
+    'body': """
+      for { ${1:i}=0; ${1:i}<=count; ${1:i}+=1 } do {
+      \t
+      }; //for
+    """
+#G
+#H
+#I
+#J
+#K
+#L
+#M
+#N
+#O
+#P
+#Q
+#R
+#S
+  'struct':
+    'prefix':'struct'
+    'body': """
+      struct ${1:struct_name} {
+      \t
+      }; // $1
+    """
+#T
+#U
+  'unit':
+    'prefix':'unit'
+    'body': """
+      unit ${1:unit_name} {
+      \t
+      }; // $1
+    """
+#V
+#W
+  'wait-cycle':
+    'prefix':'wait'
+    'body': """
+      wait cycle;
+    """
+  'when':
+    'prefix':'when'
+    'body': """
+      when ${1:condition} {
+      \t
+      }; //when
+    """
+#X
+#Y
+#Z
