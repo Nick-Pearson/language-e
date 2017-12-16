@@ -47,7 +47,7 @@
   'keywords':
     'patterns':[
       {
-        'match':'(^| )(extend|unit|var|of|event|each|in|is|import|for|keep|wait|do|out|inout|start|cover|emit|type|struct|empty|when|case|return|select|check|else)(?=( |\\n|{|;))'
+        'match':'(^| )(extend|unit|var|of|event|each|in|is|import|for|keep|wait|do|out|inout|start|cover|emit|type|struct|empty|when|case|return|select|check|else|using|if|like|gen|before|keeping|print)(?![A-Za-z0-9])'
         'name':'keyword.other.language-e'
       }
       {
@@ -63,7 +63,11 @@
         'name':'keyword.other.language-e'
       }
       {
-        'match':'(int|uint|simple_port|bits|bit|byte|bool|string|real|list|item|cross)'
+        'match':'(?<=using )(ignore|when|text|weight|no_collect|radix|at_least|illegal|no_trace|ranges|per_instance|agent_options)'
+        'name':'keyword.other.language-e'
+      }
+      {
+        'match':'(?<![A-Za-z0-9])(int|uint|simple_port|bits|bit|byte|bool|string|real|list|item|cross|transition)'
         'name':'storage.type.language-e'
       }
       {
@@ -103,7 +107,7 @@
   'constants':
     'patterns': [
       {
-        'match': '(NULL|ERROR|ERROR_CONTINUE|cycle)'
+        'match': '(NULL|ERROR_CONTINUE|ERROR|cycle|TRUE|FALSE)'
         'name': 'constant.language-e'
       }
       {
